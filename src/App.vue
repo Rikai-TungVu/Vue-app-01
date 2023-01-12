@@ -1,7 +1,7 @@
 <template>
   <section>
     <header>
-      <h1>My Friends</h1>
+      <h1>My Friends List</h1>
     </header>
     <ul>
       <friend-contact
@@ -13,7 +13,7 @@
         :email-address="friend.email"
         :is-favorite="friend.isFavorite"
         @toggle-favorite="toggleFavoriteStatus"
-      ></friend-contact>
+      ><!-- Nhận sự kiện được gửi lên từ FriendContact bằng v-on(@) --></friend-contact>
     </ul>
   </section>
 </template>
@@ -25,14 +25,14 @@ export default {
       friends: [
         {
           id: 'manuel',
-          name: 'Manuel Lorenz',
+          name: 'Manuel Fri',
           phone: '0123 45678 90',
           email: 'manuel@localhost.com',
           isFavorite: true,
         },
         {
           id: 'julie',
-          name: 'Julie Jones',
+          name: 'Julie Mon',
           phone: '0987 654421 21',
           email: 'julie@localhost.com',
           isFavorite: false,

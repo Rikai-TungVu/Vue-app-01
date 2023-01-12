@@ -23,7 +23,7 @@ export default {
     id: {
       type: String,
       required: true
-    },
+    },/* Khai báo chi tiết thuộc tính biến */
     name: {
       type: String,
       required: true,
@@ -39,10 +39,7 @@ export default {
     isFavorite: {
       type: Boolean,
       required: false,
-      default: false,
-      // validator: function(value) {
-      //   return value === '1' || value === '0';
-      // }
+      default: false
     },
   },
   data() {
@@ -56,7 +53,7 @@ export default {
     },
     toggleFavorite() {
       this.$emit('toggle-favorite', this.id);
-    },
+    },/* Gửi sự kiện từ component FriendContact*/
   },
 };
 </script>
