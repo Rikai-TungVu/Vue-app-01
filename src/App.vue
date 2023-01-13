@@ -3,7 +3,7 @@
     <header>
       <h1>My Friends List</h1>
     </header>
-    <new-friend></new-friend>
+    <new-friend @add-contact="addContact"></new-friend>
     <ul>
       <friend-contact
         v-for="friend in friends"
@@ -48,6 +48,17 @@ export default {
       );
       identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
     },
+    addContact (name, phone, email) {
+      const newFriendContact = {
+        id: new Date().toISOString(),
+        name: name,
+        phone: phone,
+        email: email,
+        isFavorite: false
+      };/* Khai báo các biến được add vô list */
+      this.friends.push(newFriendContact);
+      /* Đẩy dữ liệu mới vào list danh sách có sẵn */
+    }
   },
 };
 </script>
