@@ -1,9 +1,10 @@
 import { createApp } from 'vue';
 
 import App from './App.vue';
-import NewFriend from './components/NewFriend.vue'
+import NewFriend from './components/NewFriend.vue';
+/* Import file NewFriend vào file main từ /components/NewFriend.vue*/
 import FriendContact from './components/FriendContact.vue';
-/* Import file FriendContact vào file main*/
+/* Import file FriendContact vào file main từ FriendContact.vue*/
 import './components/FriendStyle.css';
 /* Add dự liệu đồ họa */
 
