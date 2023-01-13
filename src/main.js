@@ -11,7 +11,7 @@ import './components/FriendStyle.css';
 const app = createApp(App);
 
 app.component('friend-contact', FriendContact);
-/* Khai báo thêm element mới  friend-contact từ file FriendContact*/
+/* Khai báo thêm element mới friend-contact từ file FriendContact*/
 app.component('new-friend', NewFriend);
-
+/* Khai báo thêm element mới new-friend từ file NewFriend*/
 app.mount('#app');
