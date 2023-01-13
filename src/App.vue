@@ -14,6 +14,7 @@
         :email-address="friend.email"
         :is-favorite="friend.isFavorite"
         @toggle-favorite="toggleFavoriteStatus"
+        @delete="deleteContact"
       ><!-- Nhận sự kiện được gửi lên từ FriendContact bằng v-on(@) --></friend-contact>
     </ul>
   </section>
@@ -58,7 +59,11 @@ export default {
       };/* Khai báo các biến được add vô list */
       this.friends.push(newFriendContact);
       /* Đẩy dữ liệu mới vào list danh sách có sẵn */
-    }
+    },
+    deleteContact (friendId) {
+        this.friends = this.friends.filter(
+          (friend) => friend.id != friendId);
+      }/* Tìm trong list [friends] vs điều kiện ko xóa nếu friend.id khác friendID*/
   },
 };
 </script>

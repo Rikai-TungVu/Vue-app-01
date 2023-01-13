@@ -13,6 +13,9 @@
         {{ emailAddress }}
       </li>
     </ul>
+    <!-- <button @click="$emit('delete', id)">Delete</button> -->
+    <!-- gắn action click vs chức năng delete rồi khai báo hàm trong phần gán -->
+    <button @click="deleteFriend">Delete</button>
   </li>
 </template>
 
@@ -42,7 +45,7 @@ export default {
       default: false
     },
   },
-  emits: ['toggle-favorite'],
+  emits: ['toggle-favorite', 'delete'],
 /*   emits: {
     'toggle-favorite': function(id) {
       if (id) {
@@ -65,6 +68,9 @@ export default {
     toggleFavorite() {
       this.$emit('toggle-favorite', this.id);
     },/* Gửi sự kiện từ component FriendContact*/
+    deleteFriend() {
+      this.$emit('delete', this.id);
+    }
   },
 };
 </script>
